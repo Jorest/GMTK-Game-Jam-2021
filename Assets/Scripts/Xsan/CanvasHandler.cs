@@ -10,9 +10,15 @@ public class CanvasHandler : MonoBehaviour
     [Header("Texts etc.")]
 
     public TextMeshProUGUI pairsText;
+    public TextMeshProUGUI timerText;
 
     void Update()
     {
         pairsText.text = "" + managerScript.pairsCount;
+
+        float minutes = Mathf.Floor(managerScript.secondsLeft / 60);
+        float seconds = managerScript.secondsLeft - (minutes * 60);
+
+        timerText.text = "" + minutes + ":" + seconds;
     }
 }
