@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Players
   - Monster
+=======
+  - Witch
+>>>>>>> f2cb3709a0dfa826005f76064db3ed9d74c7cba7
   layers:
   - Default
   - TransparentFX

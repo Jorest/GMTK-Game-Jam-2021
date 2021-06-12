@@ -2586,16 +2586,6 @@ PrefabInstance:
       propertyPath: trailGroup
       value: 
       objectReference: {fileID: 993519747}
-    - target: {fileID: 4151996073166633484, guid: 636c891774148d1489e3e19ab893c899,
-        type: 3}
-      propertyPath: maxTrailLength
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 4151996073166633484, guid: 636c891774148d1489e3e19ab893c899,
-        type: 3}
-      propertyPath: distanceToNextPoint
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 6164960268028103041, guid: 636c891774148d1489e3e19ab893c899,
         type: 3}
       propertyPath: m_RootOrder
