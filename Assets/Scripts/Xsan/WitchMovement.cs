@@ -19,10 +19,10 @@ public class WitchMovement : MonoBehaviour
     private Transform spriteTransform;
     private SpriteRenderer spriteRenderer;
 
-    private float spriteYPos = 0f;
-    private float amplitude = 0.0035f;
-    private int sideMultiplier = 1;
-    private float speed = 0.0075f;
+    //private float spriteYPos = 0f;
+    //private float amplitude = 0.0035f;
+    //private int sideMultiplier = 1;
+    //private float speed = 0.0075f;
 
     void Start()
     {
@@ -61,18 +61,18 @@ public class WitchMovement : MonoBehaviour
 
         //
 
-        if (spriteYPos > amplitude)
-        {
-            sideMultiplier = -1;
-        }
-        else if (spriteYPos < -amplitude)
-        {
-            sideMultiplier = 1;
-        }
+        //if (spriteYPos > amplitude)
+        //{
+        //    sideMultiplier = -1;
+        //}
+        //else if (spriteYPos < -amplitude)
+        //{
+        //    sideMultiplier = 1;
+        //}
 
-        spriteYPos += speed * sideMultiplier * Time.deltaTime;
+        //spriteYPos += speed * sideMultiplier * Time.deltaTime;
 
-        spriteTransform.position += new Vector3(0, spriteYPos, 0);
+        //spriteTransform.position += new Vector3(0, spriteYPos, 0);
     }
 
     void FixedUpdate()

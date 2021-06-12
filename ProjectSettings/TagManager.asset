@@ -15,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Witch
+  - Monsters
+  - Trail
   - 
   - 
   - 
@@ -51,4 +51,7 @@ TagManager:
     locked: 0
   - name: All
     uniqueID: 1407315069
+    locked: 0
+  - name: Above
+    uniqueID: 803175303
     locked: 0

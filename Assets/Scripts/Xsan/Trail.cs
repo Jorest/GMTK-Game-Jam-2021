@@ -59,6 +59,9 @@ public class Trail : MonoBehaviour
 
                 prevoiusPointRenderer.SetPosition(0, previousPoint.transform.position);
                 prevoiusPointRenderer.SetPosition(1, transform.position);
+
+                CapsuleCollider2D capsule = prevoiusPointRenderer.GetComponent<CapsuleCollider2D>();
+                capsule.transform.position = previousPoint.transform.position + (transform.position - previousPoint.transform.position) / 2;
             }
 
             if (currentPointRenderer != null)
@@ -114,9 +117,8 @@ public class Trail : MonoBehaviour
         leaveTrail = false;
         Destroy(trailEnd);
 
-        Debug.Log("Trail closed");
+        List<GameObject> monsters = trailGroup.GetComponent<CheckPoligon>().getMonstersInPoly();
 
-        // function call here
-        //referencedComponent.CoolFunction(trailPoints);
+        trailGroup.GetComponent<CheckPair>().EvaluatePair(monsters);
     }
 }

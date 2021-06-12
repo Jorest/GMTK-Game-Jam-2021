@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4690308071174697238}
   - component: {fileID: 5932212012112290627}
-  m_Layer: 0
+  - component: {fileID: -8443411681583196704}
+  m_Layer: 10
   m_Name: TrailPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,3 +129,19 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!70 &-8443411681583196704
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722989572747126261}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.1, y: 0.1}
+  m_Direction: 0

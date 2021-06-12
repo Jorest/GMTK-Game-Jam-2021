@@ -1590,6 +1590,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 993519747}
+  - component: {fileID: 993519748}
+  - component: {fileID: 993519749}
   m_Layer: 0
   m_Name: TrailGroup
   m_TagString: Untagged
@@ -1611,6 +1613,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &993519748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993519746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f117f9479b14b5489c97f8ce573ece4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  INF: 10000
+--- !u!114 &993519749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993519746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885e055234b39094db5227fea8ab0408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loveEffectPrefab: {fileID: 4524662535896749873, guid: dfd55ea3b9365d0468c887d6afa4ae38,
+    type: 3}
 --- !u!4 &1065070517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1740397207394879572, guid: 064170e13be3f5d4e8e56dd4ef631d67,
