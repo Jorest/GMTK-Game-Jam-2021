@@ -9,25 +9,47 @@ public class Trail : MonoBehaviour
     public Transform trailGroup;
 
     public float distanceToNextPoint;
-    public int maxTrailLength;
+    //public int maxTrailLength;
+    public float timeBeforeFade;
     public int trailCountUntilTrailEnd;
 
     public List<GameObject> trailPoints;
     public List<GameObject> oldTrailPoints;
+    public List<GameObject> leftOverParticles;
+
+    public GameObject trailDustPrefab;
 
     private GameObject trailEnd;
 
     private GameObject currentPoint;
     private GameObject previousPoint;
 
-    private LineRenderer currentPointRenderer;
-    private LineRenderer prevoiusPointRenderer;
+    //private LineRenderer currentPointRenderer;
+    //private LineRenderer prevoiusPointRenderer;
 
     public bool leaveTrail;
+
+    private IEnumerator FadeTrail()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(timeBeforeFade);
+
+            if(trailPoints.Count > 2 && leaveTrail)
+            {
+                trailEnd.transform.position = trailPoints[1].transform.position;
+
+                Destroy(trailPoints[0]);
+                trailPoints.RemoveAt(0);
+            }
+        }
+    }
 
     void Start()
     {
         trailPoints = new List<GameObject>();
+
+        StartCoroutine(FadeTrail());
     }
 
     void FixedUpdate()
@@ -46,29 +68,29 @@ public class Trail : MonoBehaviour
 
                 trailPoints.Add(currentPoint);
 
-                if (trailPoints.Count > maxTrailLength)
-                {
-                    trailEnd.transform.position = trailPoints[1].transform.position;
+                //if (trailPoints.Count > maxTrailLength)
+                //{
+                //    trailEnd.transform.position = trailPoints[1].transform.position;
 
-                    Destroy(trailPoints[0]);
-                    trailPoints.RemoveAt(0);
-                }
+                //    Destroy(trailPoints[0]);
+                //    trailPoints.RemoveAt(0);
+                //}
 
-                currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
-                prevoiusPointRenderer = previousPoint.GetComponent<LineRenderer>();
+                //currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
+                //prevoiusPointRenderer = previousPoint.GetComponent<LineRenderer>();
 
-                prevoiusPointRenderer.SetPosition(0, previousPoint.transform.position);
-                prevoiusPointRenderer.SetPosition(1, transform.position);
+                //prevoiusPointRenderer.SetPosition(0, previousPoint.transform.position);
+                //prevoiusPointRenderer.SetPosition(1, transform.position);
 
-                CapsuleCollider2D capsule = prevoiusPointRenderer.GetComponent<CapsuleCollider2D>();
+                CapsuleCollider2D capsule = previousPoint.GetComponent<CapsuleCollider2D>();
                 capsule.transform.position = previousPoint.transform.position + (transform.position - previousPoint.transform.position) / 2;
             }
 
-            if (currentPointRenderer != null)
-            {
-                currentPointRenderer.SetPosition(0, currentPoint.transform.position);
-                currentPointRenderer.SetPosition(1, transform.position);
-            }
+            //if (currentPointRenderer != null)
+            //{
+            //    currentPointRenderer.SetPosition(0, currentPoint.transform.position);
+            //    currentPointRenderer.SetPosition(1, transform.position);
+            //}
         }
     }
 
@@ -82,20 +104,25 @@ public class Trail : MonoBehaviour
             trailPoints.Clear();
 
             currentPoint = null;
-            currentPointRenderer = null;
+            //currentPointRenderer = null;
 
             previousPoint = null;
-            prevoiusPointRenderer = null;
+            //prevoiusPointRenderer = null;
 
             foreach (var point in oldTrailPoints)
             {
                 Destroy(point);
             }
 
+            foreach (var particle in leftOverParticles)
+            {
+                Destroy(particle);
+            }
+
             //
 
             currentPoint = Instantiate(trailPointPrefab, transform.position, Quaternion.identity, trailGroup);
-            currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
+            //currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
 
             trailEnd = Instantiate(trailEndPrefab, transform.position, Quaternion.identity, trailGroup);
             trailEnd.SetActive(false);
@@ -112,7 +139,13 @@ public class Trail : MonoBehaviour
 
     public void TrailClosed()
     {
-        currentPointRenderer.SetPosition(1, trailPoints[0].transform.position);
+        //currentPointRenderer.SetPosition(1, trailPoints[0].transform.position);
+
+        Vector3 tempVector = currentPoint.transform.position - trailPoints[0].transform.position;
+
+        leftOverParticles.Add(Instantiate(trailDustPrefab, trailPoints[0].transform.position + tempVector * 0.25f, Quaternion.identity));
+        leftOverParticles.Add(Instantiate(trailDustPrefab, trailPoints[0].transform.position + tempVector * 0.5f, Quaternion.identity));
+        leftOverParticles.Add(Instantiate(trailDustPrefab, trailPoints[0].transform.position + tempVector * 0.75f, Quaternion.identity));
 
         leaveTrail = false;
         Destroy(trailEnd);

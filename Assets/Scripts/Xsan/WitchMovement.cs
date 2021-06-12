@@ -18,6 +18,7 @@ public class WitchMovement : MonoBehaviour
     private Rigidbody2D body;
     private Transform spriteTransform;
     private SpriteRenderer spriteRenderer;
+    private Transform broomEnd;
 
     //private float spriteYPos = 0f;
     //private float amplitude = 0.0035f;
@@ -29,6 +30,7 @@ public class WitchMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         spriteTransform = transform.GetChild(0);
         spriteRenderer = spriteTransform.GetComponent<SpriteRenderer>();
+        broomEnd = transform.GetChild(1);
 
         moveSpeed = normalMoveSpeed;
     }
@@ -38,25 +40,40 @@ public class WitchMovement : MonoBehaviour
         moveDirection.x = Input.GetAxis("Horizontal");
         moveDirection.y = Input.GetAxis("Vertical");
 
+        if(moveDirection.magnitude > 1)
+        {
+            moveDirection = moveDirection.normalized;
+        }
+
         if (moveDirection.magnitude > 0.1f)
         {
+            float xLocal = 0f;
+            float yLocal = 0f;
+
             if (moveDirection.x > 0)
             {
                 spriteRenderer.flipX = false;
+                xLocal = -0.375f;
+
             }
             else if(moveDirection.x < 0)
             {
                 spriteRenderer.flipX = true;
+                xLocal = 0.375f;
             }
 
             if (moveDirection.y > 0)
             {
                 spriteRenderer.sprite = backSprite;
+                yLocal = -0.2f;
             }
             else
             {
                 spriteRenderer.sprite = frontSprite;
+                yLocal = 0.135f;
             }
+
+            broomEnd.localPosition = new Vector2(xLocal, yLocal);
         }
 
         //

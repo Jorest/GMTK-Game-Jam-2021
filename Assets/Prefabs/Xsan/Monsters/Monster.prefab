@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5380867489744886866}
   - component: {fileID: 5380867489744886864}
-  - component: {fileID: 5380867489744886867}
+  - component: {fileID: 5927014838049861040}
   - component: {fileID: 370617046587054265}
   - component: {fileID: -2380061030279285578}
   m_Layer: 9
@@ -56,8 +56,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &5380867489744886867
-CircleCollider2D:
+--- !u!70 &5927014838049861040
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -70,8 +70,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.2
+  m_Size: {x: 0.9, y: 0.39}
+  m_Direction: 1
 --- !u!114 &370617046587054265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,8 +87,10 @@ MonoBehaviour:
   normalMoveSpeed: 5
   newTargetTimeRange: {x: 1.5, y: 3}
   moveRange: 1
-  frontSprite: {fileID: 21300000, guid: 5d1f05b54e4d3c8408cab8709cbaf26e, type: 3}
-  backSprite: {fileID: 21300000, guid: 5d1f05b54e4d3c8408cab8709cbaf26e, type: 3}
+  frontSprite: {fileID: 1176174196928614617, guid: e21792b5d9eef714a876239f219c461e,
+    type: 3}
+  backSprite: {fileID: 1176174196928614617, guid: e21792b5d9eef714a876239f219c461e,
+    type: 3}
 --- !u!114 &-2380061030279285578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa30ccbb8249d474f9da028ee2a79e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: other
+  type: monster
 --- !u!1 &5380867491516377820
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 5380867491516377820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5380867489744886866}
   m_RootOrder: 0
@@ -172,7 +174,8 @@ SpriteRenderer:
   m_SortingLayerID: 1407315069
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5d1f05b54e4d3c8408cab8709cbaf26e, type: 3}
+  m_Sprite: {fileID: 1176174196928614617, guid: e21792b5d9eef714a876239f219c461e,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

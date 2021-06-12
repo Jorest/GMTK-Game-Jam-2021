@@ -5,7 +5,9 @@ using UnityEngine;
 public class CheckPair : MonoBehaviour
 {
     public GameObject loveEffectPrefab;
-    
+
+    public GameManager managerScript;
+
     public void EvaluatePair(List<GameObject> monsters)
     {
         if(monsters.Count == 2 && monsters[0].GetComponent<MonsterType>().type == monsters[1].GetComponent<MonsterType>().type){
@@ -13,6 +15,8 @@ public class CheckPair : MonoBehaviour
             {
                 Instantiate(loveEffectPrefab, m.transform.position, Quaternion.identity);
                 Destroy(m);
+
+                managerScript.pairsCount += 1;
             }
         }
     }

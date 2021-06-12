@@ -93,11 +93,11 @@ public class MonsterMovement : MonoBehaviour
 
             if (moveDirection.x > 0)
             {
-                spriteRenderer.flipX = false;
+                spriteRenderer.flipX = true; //oposite to the witch
             }
             else
             {
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = false; //oposite to the witch
             }
 
             if (moveDirection.y > 0)
