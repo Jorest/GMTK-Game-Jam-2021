@@ -1,25 +1,7 @@
 fileFormatVersion: 2
-guid: 9f42cf50be64b954a9c33398e5ef2a22
+guid: 68db6f5c67cfc744da38a050feabcee1
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 7197219764622692035
-    second: better witch_0
-  - first:
-      213: 4984091876826289339
-    second: better witch_1
-  - first:
-      213: -1735168181527051686
-    second: better witch_2
-  - first:
-      213: 5039083468527986768
-    second: better witch_3
-  - first:
-      213: -6161070754210539384
-    second: witch_0
-  - first:
-      213: -4793536089062914485
-    second: witch_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -89,63 +71,9 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: witch_0
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 565
-        width: 366
-        height: 403
-      alignment: 9
-      pivot: {x: 0.58573097, y: 0.26980522}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8889b33baca7f7aa0800000000000000
-      internalID: -6161070754210539384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: witch_1
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 39
-        width: 385
-        height: 409
-      alignment: 9
-      pivot: {x: 0.60984796, y: 0.3732489}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b46c3610350f97db0800000000000000
-      internalID: -4793536089062914485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

@@ -66,7 +66,7 @@ public class WitchMovement : MonoBehaviour
             {
                 spriteRenderer.flipX = false;
             }
-            else
+            else if(moveDirection.x < 0)
             {
                 spriteRenderer.flipX = true;
             }

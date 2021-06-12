@@ -5,11 +5,17 @@ using UnityEngine;
 public class Trail : MonoBehaviour
 {
     public GameObject trailPointPrefab;
+    public GameObject trailEndPrefab;
     public Transform trailGroup;
+
     public float distanceToNextPoint;
+    public int maxTrailLength;
+    public int trailCountUntilTrailEnd;
 
     public List<GameObject> trailPoints;
-    public int maxTrailLength;
+    public List<GameObject> oldTrailPoints;
+
+    private GameObject trailEnd;
 
     private GameObject currentPoint;
     private GameObject previousPoint;
@@ -17,42 +23,100 @@ public class Trail : MonoBehaviour
     private LineRenderer currentPointRenderer;
     private LineRenderer prevoiusPointRenderer;
 
+    public bool leaveTrail;
+
     void Start()
     {
-        currentPoint = Instantiate(trailPointPrefab, transform.position, Quaternion.identity, trailGroup);
-        currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
-
         trailPoints = new List<GameObject>();
-        trailPoints.Add(currentPoint);
     }
 
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, currentPoint.transform.position) >= distanceToNextPoint)
+        if (leaveTrail)
         {
-            previousPoint = currentPoint;
-            currentPoint = Instantiate(trailPointPrefab, transform.position, Quaternion.identity);
-
-            trailPoints.Add(currentPoint);
-
-            if(trailPoints.Count > maxTrailLength)
+            if (trailPoints.Count > trailCountUntilTrailEnd)
             {
-
-                Destroy(trailPoints[0]);
-                trailPoints.RemoveAt(0);
+                trailEnd.SetActive(true);
             }
 
-            currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
-            prevoiusPointRenderer = previousPoint.GetComponent<LineRenderer>();
+            if (Vector2.Distance(transform.position, currentPoint.transform.position) >= distanceToNextPoint)
+            {
+                previousPoint = currentPoint;
+                currentPoint = Instantiate(trailPointPrefab, transform.position, Quaternion.identity);
 
-            prevoiusPointRenderer.SetPosition(0, previousPoint.transform.position);
-            prevoiusPointRenderer.SetPosition(1, transform.position);
+                trailPoints.Add(currentPoint);
+
+                if (trailPoints.Count > maxTrailLength)
+                {
+                    trailEnd.transform.position = trailPoints[1].transform.position;
+
+                    Destroy(trailPoints[0]);
+                    trailPoints.RemoveAt(0);
+                }
+
+                currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
+                prevoiusPointRenderer = previousPoint.GetComponent<LineRenderer>();
+
+                prevoiusPointRenderer.SetPosition(0, previousPoint.transform.position);
+                prevoiusPointRenderer.SetPosition(1, transform.position);
+            }
+
+            if (currentPointRenderer != null)
+            {
+                currentPointRenderer.SetPosition(0, currentPoint.transform.position);
+                currentPointRenderer.SetPosition(1, transform.position);
+            }
         }
+    }
 
-        if(currentPointRenderer != null)
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            currentPointRenderer.SetPosition(0, currentPoint.transform.position);
-            currentPointRenderer.SetPosition(1, transform.position);
+            leaveTrail = true;
+
+            oldTrailPoints = new List<GameObject>(trailPoints);
+            trailPoints.Clear();
+
+            currentPoint = null;
+            currentPointRenderer = null;
+
+            previousPoint = null;
+            prevoiusPointRenderer = null;
+
+            foreach (var point in oldTrailPoints)
+            {
+                Destroy(point);
+            }
+
+            //
+
+            currentPoint = Instantiate(trailPointPrefab, transform.position, Quaternion.identity, trailGroup);
+            currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
+
+            trailEnd = Instantiate(trailEndPrefab, transform.position, Quaternion.identity, trailGroup);
+            trailEnd.SetActive(false);
+
+            trailPoints.Add(currentPoint);
         }
+
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            leaveTrail = false;
+            Destroy(trailEnd);
+        }
+    }
+
+    public void TrailClosed()
+    {
+        currentPointRenderer.SetPosition(1, trailPoints[0].transform.position);
+
+        leaveTrail = false;
+        Destroy(trailEnd);
+
+        Debug.Log("Trail closed");
+
+        // function call here
+        //referencedComponent.CoolFunction(trailPoints);
     }
 }
