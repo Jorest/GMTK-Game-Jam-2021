@@ -22,9 +22,9 @@ public class WitchMovement : MonoBehaviour
     private IEnumerator FloatAnimation()
     {
         float spriteYPos = 0f;
-        float amplitude = 0.01f;
+        float amplitude = 0.0035f;
         int sideMultiplier = 1;
-        float speed = 0.02f;
+        float speed = 0.0075f;
 
         while (true)
         {

@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1325042231
-  m_SortingLayer: 0
+  m_SortingLayerID: 585668279
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7386193752cd6704e806b236ca1dc2be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -128,6 +128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6164960267600969486}
+  - {fileID: 3600036454164854733}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -168,3 +169,52 @@ MonoBehaviour:
   frontSprite: {fileID: 21300000, guid: 7386193752cd6704e806b236ca1dc2be, type: 3}
   backSprite: {fileID: 21300000, guid: 7386193752cd6704e806b236ca1dc2be, type: 3}
   moveSpeed: 0
+--- !u!1 &6554498440484056639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3600036454164854733}
+  - component: {fileID: 4151996073166633484}
+  m_Layer: 0
+  m_Name: Trail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3600036454164854733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554498440484056639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6164960268028103041}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4151996073166633484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554498440484056639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843564c9e4a8fc24c87c2604edfc8a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trailPointPrefab: {fileID: 6722989572747126261, guid: 8a8be2c5b0fd8004e8033a680d724d06,
+    type: 3}
+  trailGroup: {fileID: 0}
+  distanceToNextPoint: 0.25
+  trailPoints: []
+  maxTrailLength: 65

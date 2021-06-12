@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor
+    uniqueID: 1373323351
+    locked: 0
+  - name: Trail
+    uniqueID: 3592250955
+    locked: 0
+  - name: All
+    uniqueID: 585668279
+    locked: 0
