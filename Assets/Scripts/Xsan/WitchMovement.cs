@@ -19,30 +19,10 @@ public class WitchMovement : MonoBehaviour
     private Transform spriteTransform;
     private SpriteRenderer spriteRenderer;
 
-    private IEnumerator FloatAnimation()
-    {
-        float spriteYPos = 0f;
-        float amplitude = 0.0035f;
-        int sideMultiplier = 1;
-        float speed = 0.0075f;
-
-        while (true)
-        {
-            if (spriteYPos > amplitude)
-            {
-                sideMultiplier = -1;
-            }
-            else if (spriteYPos < -amplitude)
-            {
-                sideMultiplier = 1;
-            }
-
-            spriteYPos += speed * sideMultiplier * Time.deltaTime;
-
-            spriteTransform.position += new Vector3(0, spriteYPos, 0);
-            yield return new WaitForEndOfFrame();
-        }
-    }
+    private float spriteYPos = 0f;
+    private float amplitude = 0.0035f;
+    private int sideMultiplier = 1;
+    private float speed = 0.0075f;
 
     void Start()
     {
@@ -51,8 +31,6 @@ public class WitchMovement : MonoBehaviour
         spriteRenderer = spriteTransform.GetComponent<SpriteRenderer>();
 
         moveSpeed = normalMoveSpeed;
-
-        StartCoroutine(FloatAnimation());
     }
 
     void Update()
@@ -80,6 +58,21 @@ public class WitchMovement : MonoBehaviour
                 spriteRenderer.sprite = frontSprite;
             }
         }
+
+        //
+
+        if (spriteYPos > amplitude)
+        {
+            sideMultiplier = -1;
+        }
+        else if (spriteYPos < -amplitude)
+        {
+            sideMultiplier = 1;
+        }
+
+        spriteYPos += speed * sideMultiplier * Time.deltaTime;
+
+        spriteTransform.position += new Vector3(0, spriteYPos, 0);
     }
 
     void FixedUpdate()
