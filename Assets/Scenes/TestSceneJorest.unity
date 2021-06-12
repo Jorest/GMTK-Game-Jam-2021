@@ -337,6 +337,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5380867489744886893, guid: edade0728168c25499780c9e856f443b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edade0728168c25499780c9e856f443b, type: 3}
 --- !u!1001 &227816502
@@ -1498,8 +1503,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  range: 0
-  pieceType: 0
+  range: 5
+  foodAction: 2
+  WitchAction: 0
 --- !u!1001 &2117058418
 PrefabInstance:
   m_ObjectHideFlags: 0
