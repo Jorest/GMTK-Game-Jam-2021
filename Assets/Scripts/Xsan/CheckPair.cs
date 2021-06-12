@@ -8,7 +8,7 @@ public class CheckPair : MonoBehaviour
     
     public void EvaluatePair(List<GameObject> monsters)
     {
-        if(monsters.Count == 2){
+        if(monsters.Count == 2 && monsters[0].GetComponent<MonsterType>().type == monsters[1].GetComponent<MonsterType>().type){
             foreach (var m in monsters)
             {
                 Instantiate(loveEffectPrefab, m.transform.position, Quaternion.identity);
