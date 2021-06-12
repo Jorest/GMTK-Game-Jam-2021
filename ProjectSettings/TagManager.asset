@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Players
-  - Monster
-=======
-  - Witch
->>>>>>> f2cb3709a0dfa826005f76064db3ed9d74c7cba7
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -46,13 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Floor
-    uniqueID: 1373323351
-    locked: 0
-  - name: Trail
-    uniqueID: 3592250955
-    locked: 0
-  - name: All
-    uniqueID: 585668279
     locked: 0
