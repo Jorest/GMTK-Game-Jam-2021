@@ -94,32 +94,40 @@ public class Trail : MonoBehaviour
         }
     }
 
+    void ClearTheTrail()
+    {
+        oldTrailPoints = new List<GameObject>(trailPoints);
+        trailPoints.Clear();
+
+        currentPoint = null;
+        //currentPointRenderer = null;
+
+        previousPoint = null;
+        //prevoiusPointRenderer = null;
+
+        foreach (var point in oldTrailPoints)
+        {
+            Transform particleTransform = point.transform.GetChild(0);
+            particleTransform.parent = null;
+
+            StartCoroutine(particleTransform.GetComponent<ParticleShutOff>().ShutOff());
+
+            Destroy(point);
+        }
+
+        foreach (var particle in leftOverParticles)
+        {
+            StartCoroutine(particle.GetComponent<ParticleShutOff>().ShutOff());
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
+            ClearTheTrail();
+
             leaveTrail = true;
-
-            oldTrailPoints = new List<GameObject>(trailPoints);
-            trailPoints.Clear();
-
-            currentPoint = null;
-            //currentPointRenderer = null;
-
-            previousPoint = null;
-            //prevoiusPointRenderer = null;
-
-            foreach (var point in oldTrailPoints)
-            {
-                Destroy(point);
-            }
-
-            foreach (var particle in leftOverParticles)
-            {
-                Destroy(particle);
-            }
-
-            //
 
             currentPoint = Instantiate(trailPointPrefab, transform.position, Quaternion.identity, trailGroup);
             //currentPointRenderer = currentPoint.GetComponent<LineRenderer>();
