@@ -36,7 +36,7 @@ public class ChaseBehaivorNew : MonoBehaviour
 
     void Start()
     {
-        food = GameObject.FindGameObjectsWithTag("Snack");
+        
         witch = GameObject.Find("Witch");
 
         rb = this.GetComponent<Rigidbody2D>();
@@ -50,7 +50,7 @@ public class ChaseBehaivorNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        food = GameObject.FindGameObjectsWithTag("Snack");
         if ( closestSnack()!=null)
         {
             Vector3 foodDirection = closestSnack().transform.position - transform.position;
