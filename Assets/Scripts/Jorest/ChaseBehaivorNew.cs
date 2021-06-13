@@ -103,6 +103,10 @@ public class ChaseBehaivorNew : MonoBehaviour
                     monsterMovementScript.enabled = true;
                 }
             }
+            else
+            {
+                monsterMovementScript.enabled = true;
+            }
         }
 
     }
