@@ -33,7 +33,8 @@ public class AudioManager : MonoBehaviour
     #region Fields
     private AudioSource musicSource;
     private AudioSource musicSource2;
-    public AudioSource sfxSource;
+    public AudioSource sfxSourceB;
+    private AudioSource sfxSource;
     private float musicVolume = 1;
     // Multiple musics
     private bool firstMusicSourceIsActive;
@@ -48,8 +49,11 @@ public class AudioManager : MonoBehaviour
         musicSource = gameObject.AddComponent<AudioSource>();
         musicSource2 = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
+        sfxSourceB = gameObject.AddComponent<AudioSource>();
+
 
         // Make sure to enable loop on music sources
+        sfxSourceB.loop = true;
         musicSource.loop = true;
         musicSource2.loop = true;
     }
@@ -147,6 +151,12 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip, volume);
     }
 
+    public void PlaySFXB(AudioClip clip, float volume)
+    {
+        sfxSourceB.PlayOneShot(clip, volume);
+    }
+
+
     public void SetMusicVolume(float volume)
     {
         musicVolume = musicSource.volume = volume;
@@ -155,6 +165,7 @@ public class AudioManager : MonoBehaviour
     public void SetSFXVolume(float volume)
     {
         sfxSource.volume = volume;
+        sfxSourceB.volume = volume;
     }
 
     private void Start()

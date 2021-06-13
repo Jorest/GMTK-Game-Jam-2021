@@ -126,13 +126,14 @@ public class Trail : MonoBehaviour
 
     void Update()
     {
-        
-        
+
+      
         if (Input.GetKeyDown(KeyCode.J))
         {
-            if (!AudioManager.Instance.sfxSource.isPlaying)
+            ClearTheTrail();
+            if (!AudioManager.Instance.sfxSourceB.isPlaying)
             {
-                AudioManager.Instance.PlaySFX(trailSound);
+                AudioManager.Instance.PlaySFXB(trailSound,0.5f);
             }
 
             leaveTrail = true;
@@ -148,7 +149,7 @@ public class Trail : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.J))
         {
-            AudioManager.Instance.sfxSource.Stop();
+            AudioManager.Instance.sfxSourceB.Stop();
             leaveTrail = false;
             Destroy(trailEnd);
         }

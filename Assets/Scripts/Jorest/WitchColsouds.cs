@@ -68,7 +68,7 @@ public class WitchColSouds : MonoBehaviour
                 case "demon":
                     AudioManager.Instance.PlaySFX(demon);
                     break;
-                case "other":
+                case "monster":
                     AudioManager.Instance.PlaySFX(other);
                     break;
             }

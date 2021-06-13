@@ -5,8 +5,15 @@ using UnityEngine;
 public class CheckPair : MonoBehaviour
 {
     public GameObject loveEffectPrefab;
-
+    
     public GameManager managerScript;
+
+
+    public AudioClip alien;
+    public AudioClip skeleton;
+    public AudioClip ghost;
+    public AudioClip demon;
+    public AudioClip other;
 
     public void EvaluatePair(List<GameObject> monsters)
     {
@@ -30,7 +37,31 @@ public class CheckPair : MonoBehaviour
                 {
                     Instantiate(loveEffectPrefab, m.transform.position, Quaternion.identity);
                     Destroy(m);
+                    /////////////Jorest
+                    switch (m.GetComponent<MonsterType>().type)
+                    {
+                        case "ghost":
+                            AudioManager.Instance.PlaySFX(ghost);
+                            break;
+                        case "alien":
+                            AudioManager.Instance.PlaySFX(alien);
+                            break;
+                        case "skeleton":
+                            AudioManager.Instance.PlaySFX(skeleton);
+                            break;
+                        case "demon":
+                            AudioManager.Instance.PlaySFX(demon);
+                            break;
+                        case "monster":
+                            AudioManager.Instance.PlaySFX(other);
+                            break;
+                    }
 
+
+
+
+
+                    ///////////
                     managerScript.pairsCount += 1;
                 }
             }
