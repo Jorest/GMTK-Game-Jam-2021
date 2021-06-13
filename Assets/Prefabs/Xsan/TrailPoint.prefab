@@ -29,7 +29,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5670138174979401982}
+  - {fileID: 1763205211826195256}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,7 +146,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.25, y: 0.25}
   m_Direction: 0
---- !u!1001 &8065295448610074534
+--- !u!1001 &4117950417285516384
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -211,13 +211,13 @@ PrefabInstance:
     - target: {fileID: 5205763132083600267, guid: 0d665705aa9549043ae179fcfb923cd7,
         type: 3}
       propertyPath: m_Name
-      value: Broom Particle
+      value: Trail Particle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d665705aa9549043ae179fcfb923cd7, type: 3}
---- !u!4 &5670138174979401982 stripped
+--- !u!4 &1763205211826195256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2404306313140832088, guid: 0d665705aa9549043ae179fcfb923cd7,
     type: 3}
-  m_PrefabInstance: {fileID: 8065295448610074534}
+  m_PrefabInstance: {fileID: 4117950417285516384}
   m_PrefabAsset: {fileID: 0}
