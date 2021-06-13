@@ -30,8 +30,6 @@ public class Trail : MonoBehaviour
 
     public bool leaveTrail;
 
-    private bool playingSFX=false;
-
     private IEnumerator FadeTrail()
     {
         while (true)
@@ -126,14 +124,14 @@ public class Trail : MonoBehaviour
 
     void Update()
     {
-        
-        
         if (Input.GetKeyDown(KeyCode.J))
         {
             if (!AudioManager.Instance.sfxSource.isPlaying)
             {
-                AudioManager.Instance.PlaySFX(trailSound);
+                AudioManager.Instance.PlaySFX(trailSound, 0.5f);
             }
+
+            ClearTheTrail();
 
             leaveTrail = true;
 
