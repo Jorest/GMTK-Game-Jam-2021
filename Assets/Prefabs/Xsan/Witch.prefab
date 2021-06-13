@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 8791349723211987772}
   - component: {fileID: 5376916280479119777}
   - component: {fileID: 5757601164764404123}
-  - component: {fileID: 982996666741353470}
+  - component: {fileID: 515721602}
   m_Layer: 8
   m_Name: Witch
   m_TagString: Witch
@@ -209,7 +209,7 @@ MonoBehaviour:
   cooldownSeconds: 6
   SnackPrefab: {fileID: 1530628465927523278, guid: 553ae1b0dbeda154a8a1897a07b6e22a,
     type: 3}
---- !u!114 &982996666741353470
+--- !u!114 &515721602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,12 +221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ce012867eb70b49aca24c4746dcdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alien: {fileID: 8300000, guid: c40c0e9d9b0756f44a535c1cd5c04f5d, type: 3}
-  skeleton: {fileID: 8300000, guid: c40c0e9d9b0756f44a535c1cd5c04f5d, type: 3}
-  ghost: {fileID: 8300000, guid: c40c0e9d9b0756f44a535c1cd5c04f5d, type: 3}
-  demon: {fileID: 8300000, guid: c40c0e9d9b0756f44a535c1cd5c04f5d, type: 3}
-  other: {fileID: 8300000, guid: c40c0e9d9b0756f44a535c1cd5c04f5d, type: 3}
-  timeBetweenSFX: 1
+  alien: {fileID: 0}
+  skeleton: {fileID: 0}
+  ghost: {fileID: 0}
+  demon: {fileID: 0}
+  other: {fileID: 0}
+  timeBetweenSFX: 0.5
 --- !u!1 &6554498440484056639
 GameObject:
   m_ObjectHideFlags: 0

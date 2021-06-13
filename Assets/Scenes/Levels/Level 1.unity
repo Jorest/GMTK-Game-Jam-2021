@@ -10705,7 +10705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairsCount: 0
   pairsRequirement: 4
-  secondsLeft: 5
+  secondsLeft: 60
   witchScript: {fileID: 931634042}
   canvasScript: {fileID: 87259420}
   monstersInLevel:
