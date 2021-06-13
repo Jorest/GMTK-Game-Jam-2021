@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public int pairsCount; //score
 
+    //sound thingys
+    private bool soundStarted=false;
+    public AudioClip succesSound;
+
     public int pairsRequirement;
     public float secondsLeft;
 
@@ -105,6 +109,17 @@ public class GameManager : MonoBehaviour
 
             alpha = Mathf.Lerp(alpha, 1f, 0.025f);
             canvasScript.blackScreen.color = new Color(1, 1, 1, alpha);
+
+
+            if (alpha >= 0.05f && soundStarted==false) {
+                if (pairsCount >= pairsRequirement)
+                {
+                    AudioManager.Instance.PlaySFX(succesSound);
+                    soundStarted = true; 
+                }
+
+            }
+
 
             if(alpha >= 0.95f)
             {
