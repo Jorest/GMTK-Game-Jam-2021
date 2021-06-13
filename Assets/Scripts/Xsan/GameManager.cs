@@ -80,6 +80,8 @@ public class GameManager : MonoBehaviour
 
         canvasScript.headOne.sprite = canvasScript.headSprites[id1];
         canvasScript.headTwo.sprite = canvasScript.headSprites[id2];
+
+        Instantiate(canvasScript.starEffectPrefab, canvasScript.crystalBallThing.position, Quaternion.identity, canvasScript.crystalBallThing);
     }
 
     void Start()
