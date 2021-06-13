@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5380867489744886893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 5380867491516377821}
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d894f8c0978f8b541b63c6d3a13bb032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMoveSpeed: 4
+  normalMoveSpeed: 2
   newTargetTimeRange: {x: 3, y: 6}
   moveRange: 3
   frontSprite: {fileID: 6172134051995206463, guid: e21792b5d9eef714a876239f219c461e,
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f581646f6bd23f4ba84d12956084299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.3
+  moveSpeed: 0.175
   range: 5
   foodAction: 0
   WitchAction: 0

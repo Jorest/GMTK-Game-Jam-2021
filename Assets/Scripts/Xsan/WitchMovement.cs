@@ -78,6 +78,15 @@ public class WitchMovement : MonoBehaviour
 
         //
 
+        if (moveDirection.magnitude > 1)
+        {
+            moveDirection = moveDirection.normalized;
+        }
+
+        body.MovePosition(body.position + moveDirection * moveSpeed * Time.deltaTime / 20);
+
+        //
+
         //if (spriteYPos > amplitude)
         //{
         //    sideMultiplier = -1;
@@ -92,13 +101,13 @@ public class WitchMovement : MonoBehaviour
         //spriteTransform.position += new Vector3(0, spriteYPos, 0);
     }
 
-    void FixedUpdate()
-    {
-        if(moveDirection.magnitude > 1)
-        {
-            moveDirection = moveDirection.normalized;
-        }
+    //void FixedUpdate()
+    //{
+    //    if(moveDirection.magnitude > 1)
+    //    {
+    //        moveDirection = moveDirection.normalized;
+    //    }
 
-        body.MovePosition(body.position + moveDirection * moveSpeed / 1000);
-    }
+    //    body.MovePosition(body.position + moveDirection * moveSpeed / 1000);
+    //}
 }
