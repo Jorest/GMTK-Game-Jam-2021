@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterMovement : MonoBehaviour
+public class MonsterMovementCopy1 : MonoBehaviour
 {
     public float normalMoveSpeed;
     public Vector2 newTargetTimeRange;
@@ -11,7 +11,7 @@ public class MonsterMovement : MonoBehaviour
     private Transform spriteTransform;
     private SpriteRenderer spriteRenderer;
     public Sprite frontSprite;
-    //public Sprite backSprite;
+    public Sprite backSprite;
 
     private Rigidbody2D body;
 
@@ -100,14 +100,14 @@ public class MonsterMovement : MonoBehaviour
                 spriteRenderer.flipX = false; //oposite to the witch
             }
 
-            //if (moveDirection.y > 0)
-            //{
-            //    spriteRenderer.sprite = backSprite;
-            //}
-            //else
-            //{
-            //    spriteRenderer.sprite = frontSprite;
-            //}
+            if (moveDirection.y > 0)
+            {
+                spriteRenderer.sprite = backSprite;
+            }
+            else
+            {
+                spriteRenderer.sprite = frontSprite;
+            }
         }
 
         target = Vector2.Lerp(target, newTarget, 0.01f);

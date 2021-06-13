@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public int pairsCount; //score
 
+    public int pairsRequirement;
     public float secondsLeft;
 
     private IEnumerator CountTime()

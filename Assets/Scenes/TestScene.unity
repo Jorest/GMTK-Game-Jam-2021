@@ -314,6 +314,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1068597613}
     m_Modifications:
+    - target: {fileID: 370617046587054265, guid: edade0728168c25499780c9e856f443b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5380867489744886866, guid: edade0728168c25499780c9e856f443b,
         type: 3}
       propertyPath: m_RootOrder
@@ -322,12 +327,12 @@ PrefabInstance:
     - target: {fileID: 5380867489744886866, guid: edade0728168c25499780c9e856f443b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.060216427
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 5380867489744886866, guid: edade0728168c25499780c9e856f443b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3681169
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 5380867489744886866, guid: edade0728168c25499780c9e856f443b,
         type: 3}
@@ -2956,7 +2961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 0/99
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3efed7b3e5c74043b6b12bf2b54bfae, type: 2}
   m_sharedMaterial: {fileID: 2306146917259020826, guid: a3efed7b3e5c74043b6b12bf2b54bfae,
@@ -3414,7 +3419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 00:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3efed7b3e5c74043b6b12bf2b54bfae, type: 2}
   m_sharedMaterial: {fileID: 2306146917259020826, guid: a3efed7b3e5c74043b6b12bf2b54bfae,
@@ -3911,6 +3916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairsCount: 0
+  pairsRequirement: 0
   secondsLeft: 130
 --- !u!1001 &2117058418
 PrefabInstance:

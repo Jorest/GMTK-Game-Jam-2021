@@ -23,6 +23,17 @@ public class ChaseBehaivor : MonoBehaviour
     private Vector2 foodMovement;
     private Vector2 witchMovement;
 
+    private MonsterMovement monsterMovementScript;
+    private SpriteRenderer spriteRenderer;
+    private bool delayActive = true;
+
+    private IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        delayActive = false;
+
+    }
+
     void Start()
     {
         food = GameObject.FindGameObjectsWithTag("Snack");
@@ -30,6 +41,10 @@ public class ChaseBehaivor : MonoBehaviour
 
         rb = this.GetComponent<Rigidbody2D>();
 
+        monsterMovementScript = GetComponent<MonsterMovement>();
+        spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        monsterMovementScript.enabled = true;
+        StartCoroutine(StartDelay());
     }
 
     // Update is called once per frame
@@ -68,15 +83,25 @@ public class ChaseBehaivor : MonoBehaviour
             }
            
         }
-        if (Vector2.Distance((Vector2)transform.position, (Vector2)witch.transform.position) < range)
+
+        if (!delayActive)
         {
-            if (WitchAction == Behavior.Follow)
+            if (Vector2.Distance((Vector2)transform.position, (Vector2)witch.transform.position) < range)
             {
-                moveCharacter(witchMovement);
+                if (WitchAction == Behavior.Follow)
+                {
+                    moveCharacter(witchMovement);
+                }
+                else if (WitchAction == Behavior.Run)
+                {
+                    moveCharacter(-witchMovement);
+                }
+
+                monsterMovementScript.enabled = false;
             }
-            else if (WitchAction == Behavior.Run)
+            else
             {
-                moveCharacter(-witchMovement);
+                monsterMovementScript.enabled = true;
             }
         }
 
@@ -85,6 +110,15 @@ public class ChaseBehaivor : MonoBehaviour
     void moveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+
+        if (direction.x > 0)
+        {
+            spriteRenderer.flipX = true; //oposite to the witch
+        }
+        else
+        {
+            spriteRenderer.flipX = false; //oposite to the witch
+        }
     }
 
     GameObject closestSnack()

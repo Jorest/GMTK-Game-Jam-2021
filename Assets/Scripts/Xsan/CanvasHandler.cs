@@ -14,7 +14,7 @@ public class CanvasHandler : MonoBehaviour
 
     void Update()
     {
-        pairsText.text = "" + managerScript.pairsCount;
+        pairsText.text = "" + managerScript.pairsCount + "/" + managerScript.pairsRequirement;
 
         float minutes = Mathf.Floor(managerScript.secondsLeft / 60);
         float seconds = managerScript.secondsLeft - (minutes * 60);

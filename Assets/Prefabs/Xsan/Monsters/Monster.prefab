@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5380867489744886864}
   - component: {fileID: 5927014838049861040}
   - component: {fileID: 370617046587054265}
+  - component: {fileID: 7493881637865226512}
   - component: {fileID: -2380061030279285578}
   m_Layer: 9
   m_Name: Monster
@@ -47,7 +48,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 500
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -89,8 +90,22 @@ MonoBehaviour:
   moveRange: 1
   frontSprite: {fileID: 1176174196928614617, guid: e21792b5d9eef714a876239f219c461e,
     type: 3}
-  backSprite: {fileID: 1176174196928614617, guid: e21792b5d9eef714a876239f219c461e,
-    type: 3}
+--- !u!114 &7493881637865226512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5380867489744886893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f581646f6bd23f4ba84d12956084299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.35
+  range: 2
+  foodAction: 0
+  WitchAction: 2
 --- !u!114 &-2380061030279285578
 MonoBehaviour:
   m_ObjectHideFlags: 0
