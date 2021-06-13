@@ -108,7 +108,14 @@ public class GameManager : MonoBehaviour
 
             if(alpha >= 0.95f)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                if (pairsCount >= pairsRequirement)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                else
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
             }
         }
     }

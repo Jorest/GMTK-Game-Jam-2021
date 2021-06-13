@@ -28,6 +28,8 @@ public class CanvasHandler : MonoBehaviour
     // ghost
     // demon
     // alien
+    // devil
+    // monster
     public List<Sprite> headSprites;
 
     void Start()
