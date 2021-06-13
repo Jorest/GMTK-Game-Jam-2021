@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6164960267600969486}
   - component: {fileID: 6164960267600969489}
-  - component: {fileID: 891367688}
+  - component: {fileID: 5114934220720954965}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Witch
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 1407315069
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6161070754210539384, guid: 9f42cf50be64b954a9c33398e5ef2a22,
+  m_Sprite: {fileID: 5032485756848084098, guid: 80019d5842c7b3940b5e2cd622917f00,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,23 +82,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!58 &891367688
-CircleCollider2D:
+  m_SpriteSortPoint: 1
+--- !u!95 &5114934220720954965
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6164960267600969487}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08}
-  serializedVersion: 2
-  m_Radius: 0.7
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d54f96a4ba82dc145acee9f7252be367, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6164960268028103102
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6164960268028103041}
   - component: {fileID: 6164960268028103043}
+  - component: {fileID: 8791349723211987772}
   - component: {fileID: 5376916280479119777}
   m_Layer: 8
   m_Name: Witch
@@ -150,10 +154,26 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &8791349723211987772
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164960268028103102}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.08}
+  serializedVersion: 2
+  m_Radius: 0.18
 --- !u!114 &5376916280479119777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d330c27bce32b3641ad91b69e5cd216b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMoveSpeed: 60
+  normalMoveSpeed: 70
   frontSprite: {fileID: -6161070754210539384, guid: 9f42cf50be64b954a9c33398e5ef2a22,
     type: 3}
   backSprite: {fileID: -4793536089062914485, guid: 9f42cf50be64b954a9c33398e5ef2a22,

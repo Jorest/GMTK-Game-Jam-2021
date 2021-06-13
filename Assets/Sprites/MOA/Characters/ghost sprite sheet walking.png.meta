@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 80019d5842c7b3940b5e2cd622917f00
+guid: ba4b39cee1e5680448685be69d008ed4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2928250049569234148
-    second: Witch sprite sheet flying_0
+      213: -30857926733572040
+    second: ghost sprite sheet walking_0
   - first:
-      213: -6778310867690586469
-    second: Witch sprite sheet flying_1
+      213: -1282990762098459778
+    second: ghost sprite sheet walking_1
   - first:
-      213: 116108738274292235
-    second: Witch sprite sheet flying_2
+      213: 8499733334883842187
+    second: ghost sprite sheet walking_2
   - first:
-      213: 5032485756848084098
-    second: Witch sprite sheet flying_3
+      213: 2781546880715430181
+    second: ghost sprite sheet walking_3
   - first:
-      213: -7197930329733766061
-    second: Witch sprite sheet flying_4
-  - first:
-      213: -1063613728184690959
-    second: Witch sprite sheet flying_5
+      213: -4612553984140996185
+    second: ghost sprite sheet walking_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,70 +102,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Witch sprite sheet flying_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0.4, y: 0.37}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ec1812d7eb33a820800000000000000
-      internalID: 2928250049569234148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Witch sprite sheet flying_1
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0.4, y: 0.37}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9ef12acd2a9ee1a0800000000000000
-      internalID: -6778310867690586469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Witch sprite sheet flying_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0.4, y: 0.37}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b02782448408c9100800000000000000
-      internalID: 116108738274292235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Witch sprite sheet flying_3
+      name: ghost sprite sheet walking_0
       rect:
         serializedVersion: 2
         x: 0
@@ -176,20 +110,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 9
-      pivot: {x: 0.5, y: 0.325}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2849422f12bf6d540800000000000000
-      internalID: 5032485756848084098
+      spriteID: 8385a8e01ee529ff0800000000000000
+      internalID: -30857926733572040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witch sprite sheet flying_4
+      name: ghost sprite sheet walking_1
       rect:
         serializedVersion: 2
         x: 512
@@ -197,20 +131,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 9
-      pivot: {x: 0.5, y: 0.325}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 354653a5080db1c90800000000000000
-      internalID: -7197930329733766061
+      spriteID: e7b730f03b6e13ee0800000000000000
+      internalID: -1282990762098459778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Witch sprite sheet flying_5
+      name: ghost sprite sheet walking_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -218,14 +152,56 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 9
-      pivot: {x: 0.5, y: 0.325}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f6925113f84d31f0800000000000000
-      internalID: -1063613728184690959
+      spriteID: b883c4f3f6e15f570800000000000000
+      internalID: 8499733334883842187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost sprite sheet walking_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5299327962a0a9620800000000000000
+      internalID: 2781546880715430181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost sprite sheet walking_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a196fbf69aecffb0800000000000000
+      internalID: -4612553984140996185
       vertices: []
       indices: 
       edges: []

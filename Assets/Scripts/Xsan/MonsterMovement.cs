@@ -7,10 +7,11 @@ public class MonsterMovement : MonoBehaviour
     public float normalMoveSpeed;
     public Vector2 newTargetTimeRange;
     public float moveRange;
+    public bool walkAnimation;
 
     private Transform spriteTransform;
     private SpriteRenderer spriteRenderer;
-    public Sprite frontSprite;
+    //public Sprite frontSprite;
     //public Sprite backSprite;
 
     private Rigidbody2D body;
@@ -80,7 +81,11 @@ public class MonsterMovement : MonoBehaviour
 
         moveSpeed = normalMoveSpeed;
 
-        StartCoroutine(WalkSine());
+        if (walkAnimation)
+        {
+            StartCoroutine(WalkSine());
+        }
+
         StartCoroutine(Wandering());
     }
 
@@ -93,11 +98,11 @@ public class MonsterMovement : MonoBehaviour
 
             if (moveDirection.x > 0)
             {
-                spriteRenderer.flipX = true; //oposite to the witch
+                spriteRenderer.flipX = true;
             }
             else
             {
-                spriteRenderer.flipX = false; //oposite to the witch
+                spriteRenderer.flipX = false;
             }
 
             //if (moveDirection.y > 0)

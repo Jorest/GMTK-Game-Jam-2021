@@ -88,8 +88,7 @@ MonoBehaviour:
   normalMoveSpeed: 2
   newTargetTimeRange: {x: 3, y: 6}
   moveRange: 3
-  frontSprite: {fileID: 6172134051995206463, guid: e21792b5d9eef714a876239f219c461e,
-    type: 3}
+  walkAnimation: 1
 --- !u!114 &2827838815745842626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,4 +199,4 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
