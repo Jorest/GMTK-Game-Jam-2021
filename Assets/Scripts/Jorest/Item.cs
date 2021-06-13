@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public float cooldown = 60.0f;
+    public float cooldownSeconds =6f;
+    private float cooldown ;
     private bool toggled = false;
     public GameObject SnackPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cooldown = cooldownSeconds;
     }
 
     // Update is called once per frame
@@ -27,10 +28,11 @@ public class Item : MonoBehaviour
         if (cooldown <= 0.0f)
         {
             toggled = false;
+            cooldown = cooldownSeconds;
         }
         
         
-        if (Input.GetKeyDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.K) && toggled==false)
         {
             toggled = true;
             GameObject newSnack = Instantiate(SnackPrefab, transform.position, Quaternion.identity);
