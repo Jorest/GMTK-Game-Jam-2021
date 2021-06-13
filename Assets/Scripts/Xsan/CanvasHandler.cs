@@ -14,6 +14,7 @@ public class CanvasHandler : MonoBehaviour
     public TextMeshProUGUI centerText;
     public SpriteRenderer blackScreen;
 
+    public Transform crystalBallThing;
     public Transform rotatePoint;
     public Transform head1;
     public Transform head2;
@@ -21,6 +22,8 @@ public class CanvasHandler : MonoBehaviour
     public SpriteRenderer headOne;
     [HideInInspector]
     public SpriteRenderer headTwo;
+
+    public GameObject starEffectPrefab;
 
     // ghost
     // demon
@@ -43,6 +46,8 @@ public class CanvasHandler : MonoBehaviour
         timerText.text = "" + minutes + ":" + seconds;
 
         rotatePoint.Rotate(new Vector3(0, 0, 0.35f), Space.Self);
+        crystalBallThing.Rotate(new Vector3(0, 0, -0.35f), Space.Self);
+
         head1.rotation = Quaternion.Euler(0, 0, 0);
         head2.rotation = Quaternion.Euler(0, 0, 0);
     }

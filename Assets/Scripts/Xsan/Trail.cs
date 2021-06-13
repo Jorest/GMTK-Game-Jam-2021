@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Trail : MonoBehaviour
 {
+    public AudioClip trailSound;
     public GameObject trailPointPrefab;
     public GameObject trailEndPrefab;
     public Transform trailGroup;
@@ -28,6 +29,8 @@ public class Trail : MonoBehaviour
     //private LineRenderer prevoiusPointRenderer;
 
     public bool leaveTrail;
+
+    private bool playingSFX=false;
 
     private IEnumerator FadeTrail()
     {
@@ -123,9 +126,14 @@ public class Trail : MonoBehaviour
 
     void Update()
     {
+        
+        
         if (Input.GetKeyDown(KeyCode.J))
         {
-            ClearTheTrail();
+            if (!AudioManager.Instance.sfxSource.isPlaying)
+            {
+                AudioManager.Instance.PlaySFX(trailSound);
+            }
 
             leaveTrail = true;
 
@@ -140,6 +148,7 @@ public class Trail : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.J))
         {
+            AudioManager.Instance.sfxSource.Stop();
             leaveTrail = false;
             Destroy(trailEnd);
         }

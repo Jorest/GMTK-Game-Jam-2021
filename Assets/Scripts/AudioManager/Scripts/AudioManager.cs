@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
     #region Fields
     private AudioSource musicSource;
     private AudioSource musicSource2;
-    private AudioSource sfxSource;
+    public AudioSource sfxSource;
     private float musicVolume = 1;
     // Multiple musics
     private bool firstMusicSourceIsActive;
