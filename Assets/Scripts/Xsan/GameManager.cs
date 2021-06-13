@@ -9,18 +9,35 @@ public class GameManager : MonoBehaviour
     public int pairsRequirement;
     public float secondsLeft;
 
+
+    private bool gameOn = true;
+    public WitchMovement witchScript;
+
     private IEnumerator CountTime()
     {
-        while (true)
+        while (gameOn)
         {
             yield return new WaitForSeconds(1f);
 
             secondsLeft -= 1;
+
+            if(secondsLeft == 0)
+            {
+                gameOn = false;
+            }
         }
     }
 
     void Start()
     {
         StartCoroutine(CountTime());
+    }
+
+    void Update()
+    {
+        if (!gameOn)
+        {
+            //slow time
+        }
     }
 }
