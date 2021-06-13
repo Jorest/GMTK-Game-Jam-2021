@@ -156,12 +156,15 @@ public class ChaseBehaivorNew : MonoBehaviour
 
         foreach (GameObject snack in food)
         {
-            Vector2 snackpos = new Vector2(snack.transform.position.x, snack.transform.position.y);
-            float dist = Vector2.Distance(monsterPos, snackpos);
-            if (dist < range)
-            {
-                minDist = dist;
-                closeSnack = snack;
+            if (snack != null){
+
+                Vector2 snackpos = new Vector2(snack.transform.position.x, snack.transform.position.y);
+                float dist = Vector2.Distance(monsterPos, snackpos);
+                if (dist < range)
+                {
+                    minDist = dist;
+                    closeSnack = snack;
+                }
             }
         }
 

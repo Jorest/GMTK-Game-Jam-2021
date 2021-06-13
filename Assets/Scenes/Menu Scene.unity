@@ -388,7 +388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainTheme: {fileID: 8300000, guid: 45b75c87120c5ec46a15a33f99df8a52, type: 3}
-  volume: 1
+  volume: 0.5
+  sfxSource: {fileID: 0}
 --- !u!114 &742746023
 MonoBehaviour:
   m_ObjectHideFlags: 0
