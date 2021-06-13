@@ -4901,7 +4901,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loveEffectPrefab: {fileID: 4524662535896749873, guid: dfd55ea3b9365d0468c887d6afa4ae38,
     type: 3}
-  managerScript: {fileID: 2103881967}
+  managerScript: {fileID: 0}
+  witchHappy: {fileID: 8300000, guid: 5b8c08c4ea367304a8557b38d70369ab, type: 3}
+  alien: {fileID: 8300000, guid: 7763c0714f277b04985c79a31f575074, type: 3}
+  skeleton: {fileID: 8300000, guid: 89e41e2ab6f8f2446952bc23f9aa1c1d, type: 3}
+  ghost: {fileID: 8300000, guid: a13a79f36b9accf45b60e29b52ee870b, type: 3}
+  demon: {fileID: 8300000, guid: e83f86435887e1843a58d6be46ff3db2, type: 3}
+  other: {fileID: 8300000, guid: 8687c0aab04c7814892077f76af154cc, type: 3}
 --- !u!1001 &1014561826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12563,6 +12569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairsCount: 0
+  succesSound: {fileID: 8300000, guid: 82a78ad22f99031418e62fe2d1743823, type: 3}
   pairsRequirement: 10
   secondsLeft: 60
   witchScript: {fileID: 0}

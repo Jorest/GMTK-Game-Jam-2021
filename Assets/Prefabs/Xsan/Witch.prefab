@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 5376916280479119777}
   - component: {fileID: 5757601164764404123}
   - component: {fileID: 515721602}
+  - component: {fileID: 4644222075154516897}
   m_Layer: 8
   m_Name: Witch
   m_TagString: Witch
@@ -221,12 +222,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ce012867eb70b49aca24c4746dcdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alien: {fileID: 0}
-  skeleton: {fileID: 0}
-  ghost: {fileID: 0}
-  demon: {fileID: 0}
-  other: {fileID: 0}
+  alien: {fileID: 8300000, guid: 6fe54201f3d6dfe468f07c1ec2085485, type: 3}
+  skeleton: {fileID: 8300000, guid: 9f5a2bf9328ea6046a0cde07dd899b2c, type: 3}
+  ghost: {fileID: 8300000, guid: be10c1d82d61782428ba5c8a3a9dd6f1, type: 3}
+  demon: {fileID: 8300000, guid: 835adfeca7aca15408230a141a52799d, type: 3}
+  other: {fileID: 8300000, guid: 28fe63b094f1a8f4693de877c91a7614, type: 3}
+  witchbumps: {fileID: 8300000, guid: cd8daf4d2e5ca384b97ac9ead330834d, type: 3}
   timeBetweenSFX: 0.5
+--- !u!114 &4644222075154516897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164960268028103102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0b44afcb25f0d4fb02ec87947a4dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainTheme: {fileID: 8300000, guid: 45b75c87120c5ec46a15a33f99df8a52, type: 3}
+  volume: 0.25
+  loop: 1
+  sfxSourceB: {fileID: 0}
 --- !u!1 &6554498440484056639
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843564c9e4a8fc24c87c2604edfc8a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trailSound: {fileID: 8300000, guid: c3eb9af41fad6984ba46143a1ec7e648, type: 3}
   trailPointPrefab: {fileID: 6722989572747126261, guid: 8a8be2c5b0fd8004e8033a680d724d06,
     type: 3}
   trailEndPrefab: {fileID: 183738068861163588, guid: 8c5b7cd39c216bb48b9c1d36f7900719,

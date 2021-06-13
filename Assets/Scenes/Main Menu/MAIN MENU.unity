@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 2404306313140832088, guid: 989735f710a05994abca173329ee7e7d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2404306313140832088, guid: 989735f710a05994abca173329ee7e7d,
         type: 3}
@@ -448,9 +448,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainTheme: {fileID: 8300000, guid: 82a78ad22f99031418e62fe2d1743823, type: 3}
-  volume: 1
+  volume: 0.25
   loop: 0
-  sfxSource: {fileID: 0}
+  sfxSourceB: {fileID: 0}
 --- !u!114 &742746023
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WitchColSouds : MonoBehaviour
+public class WitchColsouds : MonoBehaviour
 {
 
     // alien
