@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d894f8c0978f8b541b63c6d3a13bb032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMoveSpeed: 7
+  normalMoveSpeed: 9
   newTargetTimeRange: {x: 2, y: 2.5}
   moveRange: 4
   walkAnimation: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f581646f6bd23f4ba84d12956084299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
+  moveSpeed: 0.6
   range: 4
   foodAction: 0
   WitchAction: 2
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa30ccbb8249d474f9da028ee2a79e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: zombie
+  type: devil
 --- !u!1 &5380867491516377820
 GameObject:
   m_ObjectHideFlags: 0

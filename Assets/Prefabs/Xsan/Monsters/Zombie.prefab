@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d894f8c0978f8b541b63c6d3a13bb032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMoveSpeed: 2
+  normalMoveSpeed: 4
   newTargetTimeRange: {x: 3, y: 6}
   moveRange: 3
   walkAnimation: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f581646f6bd23f4ba84d12956084299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.175
+  moveSpeed: 0.3
   range: 5
   foodAction: 0
   WitchAction: 0
