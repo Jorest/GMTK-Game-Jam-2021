@@ -22,11 +22,10 @@ public class CheckPair : MonoBehaviour
                 correctMatch = true;
             }
 
-            Debug.Log(monsters[0].GetComponent<MonsterType>().type);
-            Debug.Log(monsters[1].GetComponent<MonsterType>().type);
-
             if (correctMatch)
             {
+                managerScript.RandomizePair();
+
                 foreach (var m in monsters)
                 {
                     Instantiate(loveEffectPrefab, m.transform.position, Quaternion.identity);
