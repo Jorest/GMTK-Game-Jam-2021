@@ -10633,6 +10633,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 515721602, guid: 636c891774148d1489e3e19ab893c899, type: 3}
+      propertyPath: alien
+      value: 
+      objectReference: {fileID: 8300000, guid: 6fe54201f3d6dfe468f07c1ec2085485, type: 3}
+    - target: {fileID: 515721602, guid: 636c891774148d1489e3e19ab893c899, type: 3}
+      propertyPath: demon
+      value: 
+      objectReference: {fileID: 8300000, guid: 997cb6a09e12f564eb78be3a1d5cc638, type: 3}
+    - target: {fileID: 515721602, guid: 636c891774148d1489e3e19ab893c899, type: 3}
+      propertyPath: ghost
+      value: 
+      objectReference: {fileID: 8300000, guid: be10c1d82d61782428ba5c8a3a9dd6f1, type: 3}
+    - target: {fileID: 515721602, guid: 636c891774148d1489e3e19ab893c899, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 8300000, guid: 3b746ae1ed019f744b5a46a3f2978ef8, type: 3}
+    - target: {fileID: 515721602, guid: 636c891774148d1489e3e19ab893c899, type: 3}
+      propertyPath: skeleton
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f5a2bf9328ea6046a0cde07dd899b2c, type: 3}
     - target: {fileID: 4151996073166633484, guid: 636c891774148d1489e3e19ab893c899,
         type: 3}
       propertyPath: trailGroup
