@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/MOA/BG tiles/Tile set 3 grass and pavement2.png.meta
 guid: e013d45d091600a4e9702bef268d7245
+=======
+guid: 17595db5dddc29f45bc5ceb4be9c0dac
+>>>>>>> 15ea33994c9610c071fe0d3a72ced3ad5b3570db:Assets/Sprites/MOA/BG tiles/Tile set 3 grass and pavement.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
