@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip mainTheme;
     public float volume=1;
+    public bool loop = false;
+
     #region Instance
     private static AudioManager instance;
     public static AudioManager Instance
@@ -58,11 +60,16 @@ public class AudioManager : MonoBehaviour
         musicSource2.loop = true;
     }
 
-    public void PlayMusic(AudioClip musicClip, float volume)
+    public void PlayMusic(AudioClip musicClip, float volume, bool loop=true)
     {
-        musicSource.clip = musicClip;
-        musicSource.volume = volume;
-        musicSource.Play();
+        if (loop){
+            musicSource.clip = musicClip;
+            musicSource.volume = volume;
+            musicSource.Play();
+        } else {
+            musicSource.PlayOneShot(musicClip, volume);
+
+        }
     }
     public void PlayMusicWithFade(AudioClip musicClip, float transitionTime = 1.0f)
     {
@@ -170,7 +177,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic(mainTheme,volume);
+
+            PlayMusic(mainTheme,volume, loop);
     }
 
 }
