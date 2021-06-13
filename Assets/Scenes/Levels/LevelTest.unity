@@ -10581,6 +10581,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5166807139325320945, guid: 981c5defd9f19c94987bb81d0a72a71f,
         type: 3}
+      propertyPath: witchHappy
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b8c08c4ea367304a8557b38d70369ab, type: 3}
+    - target: {fileID: 5166807139325320945, guid: 981c5defd9f19c94987bb81d0a72a71f,
+        type: 3}
       propertyPath: managerScript
       value: 
       objectReference: {fileID: 2103881967}
@@ -10673,6 +10678,14 @@ PrefabInstance:
       propertyPath: skeleton
       value: 
       objectReference: {fileID: 8300000, guid: 9f5a2bf9328ea6046a0cde07dd899b2c, type: 3}
+    - target: {fileID: 515721602, guid: 636c891774148d1489e3e19ab893c899, type: 3}
+      propertyPath: witchbumps
+      value: 
+      objectReference: {fileID: 8300000, guid: cd8daf4d2e5ca384b97ac9ead330834d, type: 3}
+    - target: {fileID: 515721602, guid: 636c891774148d1489e3e19ab893c899, type: 3}
+      propertyPath: timeBetweenSFX
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4151996073166633484, guid: 636c891774148d1489e3e19ab893c899,
         type: 3}
       propertyPath: trailGroup

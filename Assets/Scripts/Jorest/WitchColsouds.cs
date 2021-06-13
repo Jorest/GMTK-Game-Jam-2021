@@ -16,6 +16,8 @@ public class WitchColSouds : MonoBehaviour
     public AudioClip demon;
     public AudioClip other;
 
+    public AudioClip witchbumps;
+
     public float timeBetweenSFX = 0.5f;
     private float cooldown;
     private bool enable = true;
@@ -73,6 +75,7 @@ public class WitchColSouds : MonoBehaviour
                     break;
             }
 
+            AudioManager.Instance.PlaySFX(witchbumps);
         }
 
 

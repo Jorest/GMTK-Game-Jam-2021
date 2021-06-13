@@ -8,6 +8,7 @@ public class CheckPair : MonoBehaviour
     
     public GameManager managerScript;
 
+    public AudioClip witchHappy;
 
     public AudioClip alien;
     public AudioClip skeleton;
@@ -57,7 +58,7 @@ public class CheckPair : MonoBehaviour
                             break;
                     }
 
-
+                    AudioManager.Instance.PlaySFX(witchHappy);
 
 
 
