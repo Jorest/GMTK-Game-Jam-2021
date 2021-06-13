@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
             if (alpha >= 0.05f && soundStarted==false) {
                 if (pairsCount >= pairsRequirement)
                 {
-                    AudioManager.Instance.PlaySFX(succesSound);
+                    AudioManager.Instance.PlaySFX(succesSound, 0.25f);
                     soundStarted = true; 
                 }
 

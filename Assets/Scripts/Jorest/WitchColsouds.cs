@@ -17,6 +17,7 @@ public class WitchColsouds : MonoBehaviour
     public AudioClip other;
 
     public AudioClip witchbumps;
+    public AudioClip music;
 
     public float timeBetweenSFX = 0.5f;
     private float cooldown;
@@ -27,6 +28,7 @@ public class WitchColsouds : MonoBehaviour
 
     void Start()
     {
+        AudioManager.Instance.PlayMusic(music, 0.25f);
         cooldown = timeBetweenSFX;
     }
 
