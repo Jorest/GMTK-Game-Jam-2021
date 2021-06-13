@@ -71,21 +71,11 @@ public class ChaseBehaivorNew : MonoBehaviour
 
     private void FixedUpdate()
     {
-       //food
-        if (closestSnack() != null)
-        {
-            if (foodAction== Behavior.Follow)
-            {
-                moveCharacter(foodMovement);
-            } else if (foodAction == Behavior.Run)
-            {
-                moveCharacter(-foodMovement);
-            }
-           
-        }
+   
 
         if (!delayActive)
         {
+            bool witchA = true;
             if (Vector2.Distance((Vector2)transform.position, (Vector2)witch.transform.position) < range)
             {
                 if (WitchAction == Behavior.Follow)
@@ -100,13 +90,42 @@ public class ChaseBehaivorNew : MonoBehaviour
                 }
                 else
                 {
-                    monsterMovementScript.enabled = true;
+                  //  monsterMovementScript.enabled = true;
+                    witchA = false;
                 }
             }
             else
             {
+                
                 monsterMovementScript.enabled = true;
+
+                
             }
+
+
+            //food
+            if (closestSnack() != null)
+            {
+                if (foodAction == Behavior.Follow)
+                {
+                    moveCharacter(foodMovement);
+                    monsterMovementScript.enabled = false;
+
+                }
+                else if (foodAction == Behavior.Run)
+                {
+                    moveCharacter(-foodMovement);
+                    monsterMovementScript.enabled = false;
+
+                }
+                else if (!witchA)
+                {
+                    monsterMovementScript.enabled = true;
+
+                }
+
+            }
+
         }
 
     }
