@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
         monsterTypes = new string[2];
         monsterTypes[0] = "demon";
-        monsterTypes[1] = "zombie";
+        monsterTypes[1] = "ghost";
 
         StartCoroutine(CountTime());
     }
