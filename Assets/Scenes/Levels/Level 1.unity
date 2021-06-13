@@ -10799,6 +10799,11 @@ PrefabInstance:
       propertyPath: trailGroup
       value: 
       objectReference: {fileID: 993519747}
+    - target: {fileID: 4151996073166633484, guid: 636c891774148d1489e3e19ab893c899,
+        type: 3}
+      propertyPath: trailSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c3eb9af41fad6984ba46143a1ec7e648, type: 3}
     - target: {fileID: 6164960268028103041, guid: 636c891774148d1489e3e19ab893c899,
         type: 3}
       propertyPath: m_RootOrder
