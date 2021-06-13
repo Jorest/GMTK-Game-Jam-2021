@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jumpscript : MonoBehaviour
+public class SceneManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WitchColsouds : MonoBehaviour
+public class WitchColSouds : MonoBehaviour
 {
 
     // alien
@@ -12,40 +12,52 @@ public class WitchColsouds : MonoBehaviour
     // other
     public AudioClip alien;
     public AudioClip skeleton;
-    public AudioClip zombie;
+    public AudioClip ghost;
     public AudioClip demon;
     public AudioClip other;
 
-
+    public float timeBetweenSFX = 0.5f;
+    private float cooldown;
+    private bool enable = true;
 
 
 
 
     void Start()
     {
-        
+        cooldown = timeBetweenSFX;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!enable)
+        {
+            cooldown -= Time.deltaTime;
+        }
+
+        if (cooldown <= 0)
+        {
+            enable = true;
+            cooldown = timeBetweenSFX;
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
 
-        if (col.gameObject.tag == "Monster")
+        if (col.gameObject.tag == "Monster" && enable == true)
         {
             
             GameObject monster = col.gameObject;
-            
+            enable = false;
             string type = monster.GetComponent<MonsterType>().type;
 
             switch (type)
             {
-                case "zombie":
-                    AudioManager.Instance.PlaySFX(zombie);
+                case "ghost":
+                    AudioManager.Instance.PlaySFX(ghost);
                     break;
                 case "alien":
                     AudioManager.Instance.PlaySFX(alien);

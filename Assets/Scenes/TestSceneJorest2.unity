@@ -2719,6 +2719,7 @@ MonoBehaviour:
   pairsRequirement: 4
   secondsLeft: 10
   witchScript: {fileID: 931634042}
+  monsterTypes: []
 --- !u!1001 &2117058418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3011,6 +3012,11 @@ PrefabInstance:
       propertyPath: trailGroup
       value: 
       objectReference: {fileID: 993519747}
+    - target: {fileID: 5376916280479119777, guid: 636c891774148d1489e3e19ab893c899,
+        type: 3}
+      propertyPath: normalMoveSpeed
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 6164960268028103041, guid: 636c891774148d1489e3e19ab893c899,
         type: 3}
       propertyPath: m_RootOrder
