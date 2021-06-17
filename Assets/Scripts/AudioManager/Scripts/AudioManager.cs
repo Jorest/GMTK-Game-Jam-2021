@@ -62,6 +62,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(AudioClip musicClip, float volume, bool loop=true)
     {
+        // If anything is playing, stop it
+        musicSource.Stop();
+
         if (loop){
             musicSource.clip = musicClip;
             musicSource.volume = volume;

@@ -9,14 +9,14 @@ public class WitchColsouds : MonoBehaviour
     // skeleton
     // zombie
     // demon
-    // other
-    public AudioClip alien;
-    public AudioClip skeleton;
-    public AudioClip ghost;
-    public AudioClip demon;
-    public AudioClip other;
+    // zilla
+    public List<AudioClip> alien;
+    public List<AudioClip> skeleton;
+    public List<AudioClip> ghost;
+    public List<AudioClip> demon;
+    public List<AudioClip> zilla;
 
-    public AudioClip witchbumps;
+    public List<AudioClip> witchbumps;
     public AudioClip music;
 
     public float timeBetweenSFX = 0.5f;
@@ -61,23 +61,23 @@ public class WitchColsouds : MonoBehaviour
             switch (type)
             {
                 case "ghost":
-                    AudioManager.Instance.PlaySFX(ghost);
+                    AudioManager.Instance.PlaySFX(ghost[Random.Range(0, ghost.Count-1)]);
                     break;
                 case "alien":
-                    AudioManager.Instance.PlaySFX(alien);
+                    AudioManager.Instance.PlaySFX(alien[Random.Range(0, alien.Count-1)]);
                     break;
-                case "skeleton":
-                    AudioManager.Instance.PlaySFX(skeleton);
+                case "demon"://actually skeleton
+                    AudioManager.Instance.PlaySFX(skeleton[Random.Range(0, skeleton.Count-1)]);
                     break;
-                case "demon":
-                    AudioManager.Instance.PlaySFX(demon);
+                case "devil"://actually demon
+                    AudioManager.Instance.PlaySFX(demon[Random.Range(0, demon.Count-1)]);
                     break;
                 case "monster":
-                    AudioManager.Instance.PlaySFX(other);
+                    AudioManager.Instance.PlaySFX(zilla[Random.Range(0, zilla.Count-1)]);
                     break;
             }
 
-            AudioManager.Instance.PlaySFX(witchbumps);
+            AudioManager.Instance.PlaySFX(witchbumps[Random.Range(0, witchbumps.Count-1)]);
         }
 
 

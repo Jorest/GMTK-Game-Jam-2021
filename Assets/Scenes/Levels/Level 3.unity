@@ -14232,7 +14232,7 @@ MonoBehaviour:
   pairsCount: 0
   succesSound: {fileID: 8300000, guid: 82a78ad22f99031418e62fe2d1743823, type: 3}
   pairsRequirement: 6
-  secondsLeft: 30
+  secondsLeft: 60
   witchScript: {fileID: 6129209950209369100}
   canvasScript: {fileID: 87259420}
   monstersInLevel:

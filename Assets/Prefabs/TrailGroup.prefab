@@ -60,9 +60,59 @@ MonoBehaviour:
   loveEffectPrefab: {fileID: 4524662535896749873, guid: dfd55ea3b9365d0468c887d6afa4ae38,
     type: 3}
   managerScript: {fileID: 0}
-  witchHappy: {fileID: 8300000, guid: 5b8c08c4ea367304a8557b38d70369ab, type: 3}
-  alien: {fileID: 8300000, guid: 7763c0714f277b04985c79a31f575074, type: 3}
-  skeleton: {fileID: 8300000, guid: 89e41e2ab6f8f2446952bc23f9aa1c1d, type: 3}
-  ghost: {fileID: 8300000, guid: a13a79f36b9accf45b60e29b52ee870b, type: 3}
-  demon: {fileID: 8300000, guid: e83f86435887e1843a58d6be46ff3db2, type: 3}
-  other: {fileID: 8300000, guid: 8687c0aab04c7814892077f76af154cc, type: 3}
+  alienHappy:
+  - {fileID: 8300000, guid: 7763c0714f277b04985c79a31f575074, type: 3}
+  - {fileID: 8300000, guid: 1cfeec7d940a90143b8c925232479462, type: 3}
+  - {fileID: 8300000, guid: 22524c772b8766142b56c75f9ec89da9, type: 3}
+  skeletonHappy:
+  - {fileID: 8300000, guid: 89e41e2ab6f8f2446952bc23f9aa1c1d, type: 3}
+  - {fileID: 8300000, guid: 7ada261c0641b7a4b873355abea92d1a, type: 3}
+  - {fileID: 8300000, guid: 0e934179975000c4386ea49397fa6ff6, type: 3}
+  - {fileID: 8300000, guid: 48a1fe54c1b0f8a44b3e4ac4308f9c3e, type: 3}
+  - {fileID: 8300000, guid: b5e313b4e84c47548a4febfc3be4d177, type: 3}
+  ghostHappy:
+  - {fileID: 8300000, guid: a13a79f36b9accf45b60e29b52ee870b, type: 3}
+  - {fileID: 8300000, guid: c572799f744d8bd4fb5c1c24a03d48a8, type: 3}
+  - {fileID: 8300000, guid: 4b1427c7eb8eee0438be0a133c6954bd, type: 3}
+  demonHappy:
+  - {fileID: 8300000, guid: e83f86435887e1843a58d6be46ff3db2, type: 3}
+  - {fileID: 8300000, guid: d6fb84da887d8624f80957460488e9c4, type: 3}
+  - {fileID: 8300000, guid: ce4386cb710e615409e32c3f3fc65091, type: 3}
+  zillaHappy:
+  - {fileID: 8300000, guid: 8687c0aab04c7814892077f76af154cc, type: 3}
+  - {fileID: 8300000, guid: 600a3e01aa15b80419711d8174ade541, type: 3}
+  - {fileID: 8300000, guid: 0cb997d0b09085b4da7a2224fce44012, type: 3}
+  witchHappy:
+  - {fileID: 8300000, guid: 5b8c08c4ea367304a8557b38d70369ab, type: 3}
+  - {fileID: 8300000, guid: c4338f325290a84429e70fcaf089138d, type: 3}
+  - {fileID: 8300000, guid: aa10228817236b14b9b4960654c70c3f, type: 3}
+  - {fileID: 8300000, guid: 272c4c4419d39984089f73d92f47524d, type: 3}
+  - {fileID: 8300000, guid: 59cef6e3ea755d24d84c026b0a438554, type: 3}
+  - {fileID: 8300000, guid: f0dadcef23debb946a676d863faf2f41, type: 3}
+  - {fileID: 8300000, guid: b37c6e5aedf900941bea7a98c8dfa332, type: 3}
+  alienAnnoyed:
+  - {fileID: 8300000, guid: 7763c0714f277b04985c79a31f575074, type: 3}
+  - {fileID: 8300000, guid: 1cfeec7d940a90143b8c925232479462, type: 3}
+  - {fileID: 8300000, guid: 22524c772b8766142b56c75f9ec89da9, type: 3}
+  skeletonAnnoyed:
+  - {fileID: 8300000, guid: 9f5a2bf9328ea6046a0cde07dd899b2c, type: 3}
+  - {fileID: 8300000, guid: b7b3aad47685fa744a497db722585abf, type: 3}
+  - {fileID: 8300000, guid: 30856e44626f8624794d45abaf95f475, type: 3}
+  ghostAnnoyed:
+  - {fileID: 8300000, guid: be10c1d82d61782428ba5c8a3a9dd6f1, type: 3}
+  - {fileID: 8300000, guid: 284b73d7530efcd45b014f033ac8c6a0, type: 3}
+  demonAnnoyed:
+  - {fileID: 8300000, guid: 835adfeca7aca15408230a141a52799d, type: 3}
+  - {fileID: 8300000, guid: 3b746ae1ed019f744b5a46a3f2978ef8, type: 3}
+  - {fileID: 8300000, guid: 1bafe8cae97d14243b22158cf773d602, type: 3}
+  zillaAnnoyed:
+  - {fileID: 8300000, guid: 28fe63b094f1a8f4693de877c91a7614, type: 3}
+  - {fileID: 8300000, guid: 0e0ff5fb363907249991b68ecbda2c9f, type: 3}
+  - {fileID: 8300000, guid: 0ba429161da47d24cbd8eb587bce82dd, type: 3}
+  witchAnnoyed:
+  - {fileID: 8300000, guid: abc2e8eda66e42148bbe4dfbca033179, type: 3}
+  - {fileID: 8300000, guid: 048747eb21b97c24d82a005e53057f2c, type: 3}
+  - {fileID: 8300000, guid: b86206e7190e6e2469eb3013cf567677, type: 3}
+  - {fileID: 8300000, guid: 8201dbb7e935cf740bcefce806b81642, type: 3}
+  - {fileID: 8300000, guid: aba56d7bbf38c134b84cc3615bff890c, type: 3}
+  - {fileID: 8300000, guid: 785db0efaa766e340bb885cb42a30a7f, type: 3}

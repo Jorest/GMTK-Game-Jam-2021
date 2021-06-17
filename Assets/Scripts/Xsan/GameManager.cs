@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public int pairsCount; //score
 
     //sound thingys
-    private bool soundStarted=false;
+    private float musicWait=0;
     public AudioClip succesSound;
 
     public int pairsRequirement;
@@ -46,11 +46,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+
     private void WinOrNot()
     {
         if(pairsCount >= pairsRequirement)
         {
             StartCoroutine(WriteText("You're a great matchmaker!", false));
+
+            AudioManager.Instance.PlayMusic(succesSound, 0.25f, false);
         }
         else
         {
@@ -111,25 +115,35 @@ public class GameManager : MonoBehaviour
             canvasScript.blackScreen.color = new Color(1, 1, 1, alpha);
 
 
-            if (alpha >= 0.05f && soundStarted==false) {
-                if (pairsCount >= pairsRequirement)
-                {
-                    AudioManager.Instance.PlaySFX(succesSound, 0.25f);
-                    soundStarted = true; 
-                }
+            // if (alpha >= 0.05f && soundStarted==false) {
+            //     if (pairsCount >= pairsRequirement)
+            //     {
+            //         AudioManager.Instance.PlayMusic(succesSound, 0.25f, false);
+            //         soundStarted = true; 
+            //     }
 
-            }
+            // }
 
 
             if(alpha >= 0.95f)
             {
-                if (pairsCount >= pairsRequirement)
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                }
-                else
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Time.timeScale = 1f;
+                musicWait += 1f;
+
+                Debug.Log("musicWait: "+musicWait);
+
+                if (musicWait > 60f*6f){//60fps * 6s
+
+                    Debug.Log("Move on! "+(pairsCount >= pairsRequirement));
+
+                    if (pairsCount >= pairsRequirement)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    }
                 }
             }
         }

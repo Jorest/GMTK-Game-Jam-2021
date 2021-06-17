@@ -221,12 +221,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ce012867eb70b49aca24c4746dcdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alien: {fileID: 8300000, guid: 6fe54201f3d6dfe468f07c1ec2085485, type: 3}
-  skeleton: {fileID: 8300000, guid: 9f5a2bf9328ea6046a0cde07dd899b2c, type: 3}
-  ghost: {fileID: 8300000, guid: be10c1d82d61782428ba5c8a3a9dd6f1, type: 3}
-  demon: {fileID: 8300000, guid: 835adfeca7aca15408230a141a52799d, type: 3}
-  other: {fileID: 8300000, guid: 28fe63b094f1a8f4693de877c91a7614, type: 3}
-  witchbumps: {fileID: 8300000, guid: cd8daf4d2e5ca384b97ac9ead330834d, type: 3}
+  alien:
+  - {fileID: 8300000, guid: 5c2b284986efb2f4389eefd091207a68, type: 3}
+  - {fileID: 8300000, guid: 8516ca2b94830004da65cb0d4e62493a, type: 3}
+  - {fileID: 8300000, guid: fbaf44fd2fa2bcb4793a8ca4c5659b48, type: 3}
+  - {fileID: 8300000, guid: b29837f743be3e44dbbc629e43541f64, type: 3}
+  skeleton:
+  - {fileID: 8300000, guid: e859b30a99b00394695994b8a981906d, type: 3}
+  - {fileID: 8300000, guid: fa7bd4405c58f674eb088b48af070691, type: 3}
+  - {fileID: 8300000, guid: 8036affa32c6fce4a888fb80979c6a20, type: 3}
+  ghost:
+  - {fileID: 8300000, guid: 490ed00ce26fc5842bcf5d21e98595a6, type: 3}
+  - {fileID: 8300000, guid: 7d0241b1f79e154478881d1e3515531e, type: 3}
+  - {fileID: 8300000, guid: c3b1416e340ce5c44b101e8349ff7ab0, type: 3}
+  - {fileID: 8300000, guid: 2e33e0aa321221e4b8043b0fb1012c48, type: 3}
+  - {fileID: 8300000, guid: ce6160c58a92e344699fba812ee73d36, type: 3}
+  demon:
+  - {fileID: 8300000, guid: 997cb6a09e12f564eb78be3a1d5cc638, type: 3}
+  - {fileID: 8300000, guid: a0062071efdde204592192f86b3c44f4, type: 3}
+  - {fileID: 8300000, guid: b0af4a21869cb8a4c9a01a1fe9f8b348, type: 3}
+  - {fileID: 8300000, guid: 3409b904af5e62a41a1b89d2233395e2, type: 3}
+  zilla:
+  - {fileID: 8300000, guid: 0bfafd5b85f6b364f93a41a3df1c083b, type: 3}
+  - {fileID: 8300000, guid: f3aabde7065d04b48a309a09a9de9d5d, type: 3}
+  - {fileID: 8300000, guid: 65242c643523e0e42b60043c6927731c, type: 3}
+  witchbumps:
+  - {fileID: 8300000, guid: cd8daf4d2e5ca384b97ac9ead330834d, type: 3}
+  - {fileID: 8300000, guid: 8ed266fd0c06bb04d99a4bf376bb837c, type: 3}
+  - {fileID: 8300000, guid: c2c4473bf230191419015c376cec1ca6, type: 3}
+  - {fileID: 8300000, guid: 2824312feaad19d4aa0db262f8656558, type: 3}
+  - {fileID: 8300000, guid: 7c5c7df480453c448b024f090aa940b7, type: 3}
   music: {fileID: 8300000, guid: 45b75c87120c5ec46a15a33f99df8a52, type: 3}
   timeBetweenSFX: 0.5
 --- !u!1 &6554498440484056639
