@@ -128,7 +128,7 @@ public class Trail : MonoBehaviour
     {
 
       
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Space) | Input.GetKeyDown(KeyCode.Mouse0))
         {
             ClearTheTrail();
             if (!AudioManager.Instance.sfxSourceB.isPlaying)
@@ -147,7 +147,7 @@ public class Trail : MonoBehaviour
             trailPoints.Add(currentPoint);
         }
 
-        if (Input.GetKeyUp(KeyCode.J))
+        if (Input.GetKeyUp(KeyCode.Space) | Input.GetKeyUp(KeyCode.Mouse0))
         {
             AudioManager.Instance.sfxSourceB.Stop();
             leaveTrail = false;
